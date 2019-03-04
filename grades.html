@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Untitled Document</title>
+
+<script type="text/javascript">
+function process() {
+    var NumberGrade = document.getElementById('enterGrade').value;
+    var MyGrade = getmygrade(NumberGrade);
+    document.getElementById("letterGrade").innerHTML = MyGrade;
+}
+function getmygrade(number) {
+    var letterGrade ="That is not a number!";
+    if (number <= 59)
+        letterGrade = "F";
+
+    else if (number >= 60 )
+        letterGrade = "D";
+
+    else if (number >= 70 )
+        letterGrade = "C";
+   
+    else if (number >= 80)
+        letterGrade = "B";
+    
+    else if (number >= 90)
+        letterGrade = "A";
+    
+    else return Error
+    
+    return letterGrade
+} 
+function cleargrade() {
+ document.getElementById("letterGrade").innerHTML=""
+}
+</script></head>
+<body>
+ENTER SCORE<input type="text" id="enterGrade" onchange="process();" onclick="cleargrade();">&nbsp;</input>
+<input type =button value='Calculate Grade' onclick="process();"()></input>
+<br>
+<br>
+GRADE<div id="letterGrade" ></div>
+<br>
+</body>
+</html>
