@@ -13,16 +13,16 @@ function getmygrade(number) {
     if (number <= 0.5)
         letterGrade = "F";
 
-    else if (number >= 0.6)
+    else if (number >= 0.6 && number <= 0.69)
         letterGrade = "D";
 
-    else if (number >= 0.7)
+    else if (number >= 0.7 && number <= 0.79)
         letterGrade = "C";
    
-    else if (number >= 0.8)
+    else if (number >= 0.8 && number <= 0.89)
         letterGrade = "B";
     
-    else if (number >= 0.9)
+    else if (number >= 0.9 && number <= 1.0)
         letterGrade = "A";
     
     else return Error
@@ -34,7 +34,7 @@ function cleargrade() {
 }
 </script></head>
 <body>
-ENTER SCORE<input type="text" id="enterGrade" onchange="process();" onclick="cleargrade();">&nbsp;</input>
+Please enter your score<input type="text" id="Please enter your score" onchange="process();" onclick="cleargrade();">&nbsp;</input>
 <input type =button value='Calculate Grade' onclick="process();"()></input>
 <br>
 <br>
